@@ -1,0 +1,55 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"pix_form\"}}]": "utter_confirmar_pix",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"pix_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_confirmar_pix\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pagar_boleto\"}}]": "utter_boleto_inicio",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pagar_boleto\"}}, {\"prev_action\": {\"action_name\": \"utter_boleto_inicio\"}, \"user\": {\"intent\": \"pagar_boleto\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pedir_ajuda\"}}]": "utter_ajuda",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pedir_ajuda\"}}, {\"prev_action\": {\"action_name\": \"utter_ajuda\"}, \"user\": {\"intent\": \"pedir_ajuda\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"confirmar\"}}]": "action_realizar_pix",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"confirmar\"}}, {\"prev_action\": {\"action_name\": \"action_realizar_pix\"}, \"user\": {\"intent\": \"confirmar\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cancelar\"}}]": "utter_cancelar",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cancelar\"}}, {\"prev_action\": {\"action_name\": \"utter_cancelar\"}, \"user\": {\"intent\": \"cancelar\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fazer_pix\"}}]": "pix_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fazer_pix\"}}, {\"active_loop\": {\"name\": \"pix_form\"}, \"prev_action\": {\"action_name\": \"pix_form\"}, \"user\": {\"intent\": \"fazer_pix\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"negar\"}}]": "utter_pix_cancelado",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"negar\"}}, {\"prev_action\": {\"action_name\": \"utter_pix_cancelado\"}, \"user\": {\"intent\": \"negar\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cumprimentar\"}}]": "utter_cumprimentar",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cumprimentar\"}}, {\"prev_action\": {\"action_name\": \"utter_cumprimentar\"}, \"user\": {\"intent\": \"cumprimentar\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"consultar_saldo\"}}]": "action_consultar_saldo",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"consultar_saldo\"}}, {\"prev_action\": {\"action_name\": \"action_consultar_saldo\"}, \"user\": {\"intent\": \"consultar_saldo\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [
+      "pix_form"
+    ],
+    "rules_for_loop_unhappy_path": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"pix_form\"}, \"prev_action\": {\"action_name\": \"pix_form\"}, \"user\": {\"intent\": \"fazer_pix\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pagar_boleto\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"negar\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cancelar\"}}, {\"prev_action\": {\"action_name\": \"utter_cancelar\"}, \"user\": {\"intent\": \"cancelar\"}}]",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"pix_form\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fazer_pix\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"consultar_saldo\"}}, {\"prev_action\": {\"action_name\": \"action_consultar_saldo\"}, \"user\": {\"intent\": \"consultar_saldo\"}}]",
+      "handling active loops and forms - pix_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pedir_ajuda\"}}, {\"prev_action\": {\"action_name\": \"utter_ajuda\"}, \"user\": {\"intent\": \"pedir_ajuda\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"confirmar\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pedir_ajuda\"}}]",
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cumprimentar\"}}]",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"pix_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_confirmar_pix\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"consultar_saldo\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cumprimentar\"}}, {\"prev_action\": {\"action_name\": \"utter_cumprimentar\"}, \"user\": {\"intent\": \"cumprimentar\"}}]",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"negar\"}}, {\"prev_action\": {\"action_name\": \"utter_pix_cancelado\"}, \"user\": {\"intent\": \"negar\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cancelar\"}}]",
+      "handling active loops and forms - pix_form - action_listen",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pagar_boleto\"}}, {\"prev_action\": {\"action_name\": \"utter_boleto_inicio\"}, \"user\": {\"intent\": \"pagar_boleto\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"confirmar\"}}, {\"prev_action\": {\"action_name\": \"action_realizar_pix\"}, \"user\": {\"intent\": \"confirmar\"}}]"
+    ]
+  }
+}

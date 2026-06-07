@@ -1,0 +1,88 @@
+version: "3.1"
+
+nlu:
+- intent: cumprimentar
+  examples: |
+    - oi
+    - olá
+    - bom dia
+    - boa tarde
+    - boa noite
+    - tudo bem?
+
+- intent: consultar_saldo
+  examples: |
+    - quero ver meu saldo
+    - quanto eu tenho na conta?
+    - mostrar meu saldo
+    - ver saldo
+    - saldo
+    - tenho quanto?
+    - quanto dinheiro eu tenho?
+    - ver meu dinheiro
+
+- intent: fazer_pix
+  examples: |
+    - quero fazer um pix
+    - fazer pix
+    - mandar dinheiro
+    - enviar dinheiro
+    - transferir dinheiro
+    - quero transferir
+    - pix
+    - mandar um pix
+    - preciso enviar um pix
+    - quero mandar dinheiro para alguém
+
+- intent: pagar_boleto
+  examples: |
+    - quero pagar um boleto
+    - pagar boleto
+    - pagar conta
+    - tenho uma conta para pagar
+    - boleto
+    - pagar uma fatura
+
+- intent: pedir_ajuda
+  examples: |
+    - preciso de ajuda
+    - me ajuda
+    - não entendi
+    - estou perdido
+    - não sei o que fazer
+    - ajuda
+    - pode me explicar?
+
+- intent: cancelar
+  examples: |
+    - cancelar
+    - quero cancelar
+    - parar
+    - desiste
+    - não quero mais
+    - voltar
+    - cancela isso
+    - pare a operação
+
+- intent: confirmar
+  examples: |
+    - sim
+    - isso
+    - correto
+    - está certo
+    - pode confirmar
+    - confirmo
+    - pode fazer
+    - tudo certo
+    - quero confirmar
+
+- intent: negar
+  examples: |
+    - não
+    - errado
+    - está errado
+    - não confirma
+    - não quero
+    - melhor não
+    - cancelar pix
+    - desisto

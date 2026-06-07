@@ -1,0 +1,38 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"consultar_saldo\"}}]": "utter_saldo",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"consultar_saldo\"}}, {\"prev_action\": {\"action_name\": \"utter_saldo\"}, \"user\": {\"intent\": \"consultar_saldo\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fazer_pix\"}}]": "utter_pix_inicio",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fazer_pix\"}}, {\"prev_action\": {\"action_name\": \"utter_pix_inicio\"}, \"user\": {\"intent\": \"fazer_pix\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pedir_ajuda\"}}]": "utter_ajuda",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pedir_ajuda\"}}, {\"prev_action\": {\"action_name\": \"utter_ajuda\"}, \"user\": {\"intent\": \"pedir_ajuda\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cancelar\"}}]": "utter_cancelar",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cancelar\"}}, {\"prev_action\": {\"action_name\": \"utter_cancelar\"}, \"user\": {\"intent\": \"cancelar\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cumprimentar\"}}]": "utter_cumprimentar",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cumprimentar\"}}, {\"prev_action\": {\"action_name\": \"utter_cumprimentar\"}, \"user\": {\"intent\": \"cumprimentar\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pagar_boleto\"}}]": "utter_boleto_inicio",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pagar_boleto\"}}, {\"prev_action\": {\"action_name\": \"utter_boleto_inicio\"}, \"user\": {\"intent\": \"pagar_boleto\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pedir_ajuda\"}}, {\"prev_action\": {\"action_name\": \"utter_ajuda\"}, \"user\": {\"intent\": \"pedir_ajuda\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pagar_boleto\"}}, {\"prev_action\": {\"action_name\": \"utter_boleto_inicio\"}, \"user\": {\"intent\": \"pagar_boleto\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pagar_boleto\"}}]",
+      "predicting default action with intent back",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"consultar_saldo\"}}, {\"prev_action\": {\"action_name\": \"utter_saldo\"}, \"user\": {\"intent\": \"consultar_saldo\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cancelar\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cumprimentar\"}}]",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pedir_ajuda\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cancelar\"}}, {\"prev_action\": {\"action_name\": \"utter_cancelar\"}, \"user\": {\"intent\": \"cancelar\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cumprimentar\"}}, {\"prev_action\": {\"action_name\": \"utter_cumprimentar\"}, \"user\": {\"intent\": \"cumprimentar\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fazer_pix\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fazer_pix\"}}, {\"prev_action\": {\"action_name\": \"utter_pix_inicio\"}, \"user\": {\"intent\": \"fazer_pix\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"consultar_saldo\"}}]"
+    ]
+  }
+}

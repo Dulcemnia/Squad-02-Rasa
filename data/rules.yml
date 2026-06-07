@@ -1,0 +1,52 @@
+version: "3.1"
+
+rules:
+
+- rule: Responder saudação
+  steps:
+  - intent: cumprimentar
+  - action: utter_cumprimentar
+
+- rule: Consultar saldo
+  steps:
+  - intent: consultar_saldo
+  - action: action_consultar_saldo
+
+- rule: Começar Pix guiado
+  steps:
+  - intent: fazer_pix
+  - action: pix_form
+  - active_loop: pix_form
+
+- rule: Finalizar formulário de Pix
+  condition:
+  - active_loop: pix_form
+  steps:
+  - action: pix_form
+  - active_loop: null
+  - action: utter_confirmar_pix
+
+- rule: Confirmar Pix
+  steps:
+  - intent: confirmar
+  - action: action_realizar_pix
+
+- rule: Negar Pix
+  steps:
+  - intent: negar
+  - action: utter_pix_cancelado
+
+- rule: Começar pagamento de boleto
+  steps:
+  - intent: pagar_boleto
+  - action: utter_boleto_inicio
+
+- rule: Pedir ajuda
+  steps:
+  - intent: pedir_ajuda
+  - action: utter_ajuda
+
+- rule: Cancelar operação
+  steps:
+  - intent: cancelar
+  - action: utter_cancelar

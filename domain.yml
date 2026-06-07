@@ -1,0 +1,69 @@
+version: "3.1"
+
+intents:
+  - cumprimentar
+  - consultar_saldo
+  - fazer_pix
+  - pagar_boleto
+  - pedir_ajuda
+  - cancelar
+  - confirmar
+  - negar
+
+slots:
+  valor_pix:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: pix_form
+            requested_slot: valor_pix
+
+  destinatario_pix:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: pix_form
+            requested_slot: destinatario_pix
+
+forms:
+  pix_form:
+    required_slots:
+      - valor_pix
+      - destinatario_pix
+
+responses:
+  utter_cumprimentar:
+    - text: "Olá! Eu posso te ajudar a ver saldo, fazer Pix ou pagar boleto."
+
+  utter_ajuda:
+    - text: "Sem problema. Me diga o que você quer fazer: ver saldo, fazer Pix ou pagar boleto."
+
+  utter_ask_valor_pix:
+    - text: "Vamos fazer o Pix com calma. Qual valor você quer enviar?"
+
+  utter_ask_destinatario_pix:
+    - text: "Para quem você quer enviar esse Pix?"
+
+  utter_confirmar_pix:
+    - text: "Confira antes de continuar: você quer enviar R$ {valor_pix} para {destinatario_pix}. Está certo?"
+
+  utter_pix_cancelado:
+    - text: "Tudo bem, Pix cancelado. Nenhum dinheiro foi enviado."
+
+  utter_boleto_inicio:
+    - text: "Certo. Vamos pagar o boleto. Primeiro, me envie o código do boleto."
+
+  utter_cancelar:
+    - text: "Tudo bem, operação cancelada. Nenhum dinheiro foi enviado."
+
+actions:
+  - action_consultar_saldo
+  - action_realizar_pix
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
