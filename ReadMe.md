@@ -7,3 +7,5 @@ No segundo terminal de cmd, também precisa ativar o venv com 'venv\Scripts\acti
 Porém a IA é ''ligada'' com o comando 'rasa shell --endpoints endpoints.yml'
 
 A partir dai é possível digitar os comandos para verificar as funções que a IA foi treinada.
+
+**É preciso ter e usar o Python 3.10 pra treinar, rodar, e usar a IA porque a Rasa não tem suporte pra versões além dela.
